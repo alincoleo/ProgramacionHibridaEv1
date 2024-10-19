@@ -1,3 +1,41 @@
-<p>
-  circulo works!
-</p>
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Círculo</ion-card-title>
+    <ion-card-subtitle>Perimetro</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    El perimetro de un círculo es la longitud de la línea que forma su borde.
+  </ion-card-content>
+  <ion-card-content>
+    <ion-list lines="none">
+      <ion-item>
+        <!-- con el atributo end la imagen queda a la derecha  -->
+        <ion-img slot="end" alt="Partes de un circulo" src="https://www.varsitytutors.com/assets/vt-hotmath-legacy/hotmath_help/spanish/topics/equation-of-a-circle/circle1-spanish.gif"
+         />
+  
+        <ion-list lines="none">
+          <ion-item>
+            Donde: <br>  
+            P : perímetro <br>
+            d : diámetro <br>
+            r : radio del círculo <br>
+            π : 3.1416
+          </ion-item>
+        </ion-list>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-card>
+<ion-list lines="none">
+  <ion-item>
+    <ion-input [(ngModel)]="radiostr" type="number" label="Radio (cm)" label-placement="floating" fill="solid" placeholder="ej: 20"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-button (click)="calcularPerimetro()">CALCULAR EL PERÍMETRO</ion-button>
+  </ion-item>
+  <ion-item>
+  <!-- imprime el msj una vez que se clickea calcular -->
+   {{resultado}}
+  </ion-item>
+</ion-list>
