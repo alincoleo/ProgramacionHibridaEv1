@@ -1,0 +1,6 @@
+// esto hace que en pantallas más pequeñas la imagen se reduzca al 50%
+@media (max-width: 768px) {
+    ion-img {
+      width: 50%; 
+    }
+  }
